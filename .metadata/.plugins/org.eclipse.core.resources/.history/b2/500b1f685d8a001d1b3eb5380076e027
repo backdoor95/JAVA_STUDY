@@ -1,0 +1,8 @@
+package kosta.Phone;
+
+import java.util.Scanner;
+
+public class DataInput {
+	
+	 Scanner sc = new Scanner(System.in);
+}

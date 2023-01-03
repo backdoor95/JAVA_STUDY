@@ -1,0 +1,53 @@
+package kosta.order;
+
+public class Order {
+	private Member orderMember;
+	private Item orderItem;
+	private int orderQuantity;
+	private int orderPrice;
+
+	public Order() {// default 생성자
+
+	}
+	
+	public Order(String memberName, String memberAddress, String itemName, int itemPrice, int orderQuantity, int orderPrice) {
+		this.orderMember = new Member(memberName,memberAddress);
+		this.orderItem = new Item(itemName, itemPrice);
+		this.orderQuantity= orderQuantity;
+		this.orderPrice= orderPrice;
+	}
+
+	public Member getOrderMember() {
+		return orderMember;
+	}
+
+	public void setOrderMember(Member orderMember) {
+		this.orderMember = orderMember;
+	}
+
+	public Item getOrderItem() {
+		return orderItem;
+	}
+
+	public void setOrderItem(Item orderItem) {
+		this.orderItem = orderItem;
+	}
+
+	public int getOrderQuantity() {
+		return orderQuantity;
+	}
+
+	public void setOrderQuantity(int orderQuantity) {
+		this.orderQuantity = orderQuantity;
+	}
+
+	public int getOrderPrice() {
+		return orderPrice;
+	}
+
+	public void setOrderPrice(int orderPrice) {
+		this.orderPrice = orderPrice;
+	}
+
+
+}

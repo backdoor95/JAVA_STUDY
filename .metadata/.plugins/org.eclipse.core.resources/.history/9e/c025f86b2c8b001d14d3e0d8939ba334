@@ -1,0 +1,41 @@
+package kosta.bank;
+
+public class Account {
+	private String accountID;
+	private long accountBalance;
+
+	public Account() {// default 생성자
+
+	}
+
+	public Account(String accountID, long accountBalance) {// 생성자 오버로딩
+		super();
+		this.accountID = accountID;
+		this.accountBalance = accountBalance;
+	}
+
+	public String getID() {
+		return accountID;
+	}
+
+	public void setAccountID(String accountID) {
+		this.accountID = accountID;
+	}
+
+	public long getBalance() {
+		return accountBalance;
+	}
+
+	public void setAccountBalance(long accountBalance) {
+		this.accountBalance = accountBalance;
+	}
+
+	public void deposit(long amt) {
+		this.accountBalance += amt;
+	}
+
+	public boolean withdraw(long amt) {
+		return (this.accountBalance - amt >= 0);
+	}
+
+}

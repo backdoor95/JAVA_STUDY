@@ -1,0 +1,28 @@
+package kosta.order;
+
+public class Member {
+	private String name;
+	private	String address;
+	
+	public Member() {}// default 생성자
+	
+	public Member(String name, String address) {//생성자 오버로딩
+		this.name=name;
+		this.address=address;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	
+}

@@ -1,0 +1,31 @@
+package kosta.opp;
+
+public class StaticExam {
+	int total; // 필드
+	static int grandTotal; //정적요소
+	
+	public void add() {
+		total+=10;
+		grandTotal+=10;
+	}
+	
+	public void print() {// 이건 객체의 멤버이다. 멤버 메서드
+		System.out.println("메서드 호출");
+	}
+
+	public static void main(String[] args) {
+		StaticExam se = new StaticExam();
+		se.print();// 객체를 생성하고 메서드를 호출해야함.
+		//print();// 이건 에러가 뜸 이렇게 호출하고 싶으면 public static void print() 이렇게 메소드를 수정해줘야한다. 이렇게햐면 객체를 생성하지 않고도 print()써서 사용이 가능하다.
+		StaticExam se2 = new StaticExam();
+		
+		se.add();
+		se2.add();
+		System.out.println("total: "+se.total);// 
+		System.out.println("grandTotal: "+se.grandTotal);
+		System.out.println("----------------------------");
+		System.out.println("total: "+se2.total);
+		System.out.println("grandTotal: "+se2.grandTotal);
+	}
+
+}

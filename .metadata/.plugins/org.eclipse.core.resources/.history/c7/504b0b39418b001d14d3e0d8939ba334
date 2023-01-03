@@ -1,0 +1,46 @@
+package kosta.bank;
+
+public class MyBank {
+	private Customer customers[];
+	private int customersNum;
+	
+	public MyBank() {
+		customers = new Customer[100];// 최대 100명의 사람 저장가능
+	}// default 생성자
+	
+	public Customer getCustomer(String id) {
+		int idx=0;
+		for(int i=0;i<customersNum;i++)
+		{
+			if(customers[i].getId().equals(id))// ==가 아니라 equal로 해야한다.
+			{
+				idx=i;
+				break;
+			}
+			
+		}
+		return customers[idx];
+	}
+	
+	
+	public Customer[] getAllCustomers() {
+		return customers;
+	}
+	public void setCustomers(Customer[] customers) {
+		this.customers = customers;
+	}
+	public int getCustomersNum() {
+		return customersNum;
+	}
+	public void setCustomersNum(int customersNum) {
+		this.customersNum = customersNum;
+	}
+	
+	public void addCustomer(String ID, String name, long balance) {
+		customers[customersNum++] = new Customer(ID, name, balance);
+		
+	}
+	
+	
+	
+}

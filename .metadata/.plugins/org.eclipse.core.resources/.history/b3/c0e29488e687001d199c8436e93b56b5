@@ -1,0 +1,58 @@
+package kosta.Phone;
+
+import java.util.Scanner;
+
+public class PhoneMain {
+	static int N = 5;
+
+	public static void main(String[] args) {
+		PhoneInfo people[] = new PhoneInfo[N];
+		Scanner sc = new Scanner(System.in);
+		String menu; // 1. 정보입력 , 2. 출력
+		int count = 0;
+		while (true) {
+			System.out.println("메뉴를 입력해주세요 : 1. 정보입력 , 2. 출력");
+			menu = sc.nextLine();
+			switch (menu) {
+			case "1":
+				try {
+					InsertInfo(people, count);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				count++;
+				break;
+			case "2":
+				showAllInfo(people, count);
+				break;
+			default:
+				break;
+
+			}
+		}
+	}
+
+	public static void InsertInfo(PhoneInfo arr[], int count) throws Exception {
+		Scanner sc = new Scanner(System.in);
+		
+		if (count >= N) {
+			throw new Exception("용량 초과!");
+		}
+		
+		System.out.println("이름을 입력해주세요");
+		String name= sc.nextLine();
+		System.out.println("전화번로를 입력해주세요");
+		String phoneNo = sc.nextLine();
+		System.out.println("생년월일을 입력해주세요");
+		String birth = sc.nextLine();
+		arr[count]= new PhoneInfo(name, phoneNo, birth);
+	}
+
+	public static void showAllInfo(PhoneInfo arr[], int count) {
+		for (int i = 0; i < count; i++) {
+			arr[i].show();
+		}
+	}
+
+}

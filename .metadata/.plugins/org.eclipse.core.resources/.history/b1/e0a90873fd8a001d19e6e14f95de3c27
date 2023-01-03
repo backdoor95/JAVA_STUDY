@@ -1,0 +1,31 @@
+package kosta.video;
+
+public class Video {
+	private int videoNumber;
+	private String title;
+	private String actor;
+	public int getVideoNumber() {
+		return videoNumber;
+	}
+	public void setVideoNumber(int videoNumber) {
+		this.videoNumber = videoNumber;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getActor() {
+		return actor;
+	}
+	public void setActor(String actor) {
+		this.actor = actor;
+	}
+	
+	
+	
+	
+	
+	
+}

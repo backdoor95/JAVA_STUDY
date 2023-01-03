@@ -1,0 +1,41 @@
+package kosta.bank;
+
+public class MyBank {
+	private Customer customers[];
+	private int customersNum;
+	
+	public MyBank() {}// default 생성자
+	
+	
+	
+	public MyBank(Customer[] customers, int customersNum) {
+		super();
+		this.customers = customers;
+		this.customersNum = customersNum;
+	}
+
+	public Customer getCustomer(String id) {
+		
+	}
+	
+	
+	public Customer[] getAllCustomers() {
+		return customers;
+	}
+	public void setCustomers(Customer[] customers) {
+		this.customers = customers;
+	}
+	public int getCustomersNum() {
+		return customersNum;
+	}
+	public void setCustomersNum(int customersNum) {
+		this.customersNum = customersNum;
+	}
+	
+	public void addCustomer(String ID, String name, long balance) {
+		
+	}
+	
+	
+	
+}
