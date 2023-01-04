@@ -5,40 +5,49 @@ import java.util.Scanner;
 public class VideoMain {
 
 	static int count = 0;
-	static int videoCount= 0;
+	static int videoCount = 0;
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
 
-		GeneralMember[] GM = new GeneralMember[5];
+		GeneralMember g1 = new GeneralMember("aaa", "홍길동", "동탄", 1, "트랜스포머3", "서봉수");
+		SpecialMember s1 = new SpecialMember("bbb", "김철수", "서울", 2, "쿵푸팬더2", "지성민", 10);
+		
+		g1.show();
+		System.out.println();
+		s1.show();
+		
+		
 
-		while (true) {
-			System.out.println("1.정보입력, 2.출력");
-
-			String menu = sc.nextLine();
-
-			switch (menu) {
-
-			case "1":
-				try {
-					InputData(GM);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				count++;
-				break;
-
-			case "2":
-				InfoList(GM);
-				break;
-
-			default:
-				break;
-
-			}
-
-		}
+//		GeneralMember[] GM = new GeneralMember[5];
+//
+//		while (true) {
+//			System.out.println("1.정보입력, 2.출력");
+//
+//			String menu = sc.nextLine();
+//
+//			switch (menu) {
+//
+//			case "1":
+//				try {
+//					InputData(GM);
+//				} catch (Exception e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//				count++;
+//				break;
+//
+//			case "2":
+//				InfoList(GM);
+//				break;
+//
+//			default:
+//				break;
+//
+//			}
+//
+//		}
 
 	}
 
@@ -67,7 +76,7 @@ public class VideoMain {
 //		GM[count].setVideoInfo(videoNumber, videoTitle, videoActor);
 
 	}
-	
+
 	public static void InfoList(GeneralMember GM[]) {
 
 		for (int i = 0; i < count; i++) {
