@@ -10039,3 +10039,6 @@ java.nio.file.AccessDeniedException: C:\Program Files\Git\etc\.probe-249926e2-5d
 	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:333)
 	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:300)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.equinox.security 1 0 2023-01-06 14:28:08.591
+!MESSAGE New keyring password generated. 
