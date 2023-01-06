@@ -5,7 +5,10 @@ public class StaticExam {
 	static int grandTotal; // 정적요소(정적필드) -> 객체들끼리 공유함.
 	final int num = 10; // final로 선언된 변수는 static의 성격을 가짐.
 	final static int UPPER_LIMIT=10000000;//final로 선언된 변수는 static의 성격을 가짐. 값의 변경을 불허(상수)=> 대문자로 선언
+//	static final int UPPER_LIMIT=10000000;//final로 선언된 변수는 static의 성격을 가짐. 값의 변경을 불허(상수)=> 대문자로 선언 (1.이 둘의 차이점
+	//2. final 만 쓸때와 final static 을 쓸때의 차이
 
+	
 	public void add() {// static 이 없을때면 객체가 생성이 되어야 메모리에 올라감. static 메소드 안에는 오직 static 필드만 사용이 가능하다.
 		total += 10;
 		grandTotal += 10;

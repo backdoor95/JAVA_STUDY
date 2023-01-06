@@ -12,6 +12,7 @@ public class PhoneMain {
 		//Scanner sc = new Scanner(System.in);
 		String menu; // 1. 정보입력 , 2. 출력
 		int count = 0;
+		
 		while (true) {
 			System.out.println("메뉴를 입력해주세요 : 1.정보입력 , 2.출력, 3.검색, 4.수정, 5.삭제, 6.종료");
 			menu = DataInput.sc.nextLine();/// 내가 틀린 부분!!!!!!!!!!!!!!!!!!!!!!!!!! 이렇게 쓰면됨.
