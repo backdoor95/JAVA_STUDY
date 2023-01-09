@@ -7,11 +7,13 @@ public class Main {
 		Dao dao1= new OracleDao();
 		Dao dao2 = new MySQLDao();
 		
-		
 		BoardService service = new BoardService(dao1);
+		BoardService service2 = new BoardService(dao2);
 		
 		service.insertBoard();
+		service2.insertBoard();
 
+		
 	}
 
 }

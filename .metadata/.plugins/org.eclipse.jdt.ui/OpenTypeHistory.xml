@@ -2,4 +2,11 @@
 <typeInfoHistroy>
     <typeInfo handle="=java_basic/C:\/Program Files\/Java\/jdk-11.0.12\/lib\/jrt-fs.jar`java.base&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1672205233678"/>
     <typeInfo handle="=java_basic/src&lt;kosta.opp{Account.java[Account" modifiers="1" timestamp="1672796576112"/>
+    <typeInfo handle="=java_basic/src&lt;kosta.oop2{Role.java[Role" modifiers="1025" timestamp="1672974933952"/>
+    <typeInfo handle="=java_basic/src&lt;kosta.oop3{Dao.java[Dao" modifiers="513" timestamp="1672983744265"/>
+    <typeInfo handle="=java_basic/src&lt;kosta.oop5{Man.java[Man" modifiers="1" timestamp="1672985965788"/>
+    <typeInfo handle="=java_basic/C:\/Program Files\/Java\/jdk-11.0.12\/lib\/jrt-fs.jar`java.base&lt;java.lang(Runnable.class[Runnable" modifiers="1537" timestamp="1672205233678"/>
+    <typeInfo handle="=java_basic/C:\/Program Files\/Java\/jdk-11.0.12\/lib\/jrt-fs.jar`java.desktop&lt;java.awt(Frame.class[Frame" modifiers="33" timestamp="1672205233678"/>
+    <typeInfo handle="=java_basic/src&lt;kosta.oop5.review1{Speakable.java[Speakable" modifiers="513" timestamp="1672988643400"/>
+    <typeInfo handle="=java_basic/src&lt;kosta.oop5.review1{Man.java[Man" modifiers="1" timestamp="1672993547069"/>
 </typeInfoHistroy>
