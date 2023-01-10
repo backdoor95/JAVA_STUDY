@@ -8,5 +8,12 @@
     <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="java.awt.event.WindowListener"/>
+    <fullyQualifiedTypeName name="kosta.lamda.MyType"/>
+    <fullyQualifiedTypeName name="kosta.oop3.Dao"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
 </qualifiedTypeNameHistroy>

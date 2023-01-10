@@ -15,4 +15,9 @@ public class BoardService {
 	public void insertBoard() {
 		dao.insert();
 	}
+
+	public void insert() {
+		// TODO Auto-generated method stub
+		
+	}
 }
