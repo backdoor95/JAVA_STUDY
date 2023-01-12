@@ -1,4 +1,5 @@
 package kosta.Phone;
+
 import kosta.Phone.DataInput;
 
 public class PhoneMain {
@@ -6,15 +7,14 @@ public class PhoneMain {
 // 패키지는 소문자로 시작해야 한다.
 
 	public static void main(String[] args) {
-		
-		
+
 		Manager Mg = new Manager();
-		//Scanner sc = new Scanner(System.in);
+		// Scanner sc = new Scanner(System.in);
 		String menu; // 1. 정보입력 , 2. 출력
 		int count = 0;
-		
+
 		while (true) {
-			System.out.println("메뉴를 입력해주세요 : 1.정보입력 , 2.출력, 3.검색, 4.수정, 5.삭제, 6.종료");
+			System.out.println("메뉴를 입력해주세요 : 1.정보입력 , 2.출력, 3.검색, 4.수정, 5.삭제, 6.정렬, 7.종료");
 			menu = DataInput.sc.nextLine();/// 내가 틀린 부분!!!!!!!!!!!!!!!!!!!!!!!!!! 이렇게 쓰면됨.
 			switch (menu) {
 			case "1":
@@ -29,18 +29,21 @@ public class PhoneMain {
 			case "2":
 				Mg.listPhoneInfo();
 				break;
-			case"3":
+			case "3":
 				Mg.searchPhoneInfo();
 				break;
-			case"4":
+			case "4":
 				Mg.updatePhoneInfo();
 				break;
-			case"5":
-				Mg.deletePhonInfo();
+			case "5":
+				Mg.deletePhoneInfo();
 				break;
 			case "6":
+				Mg.sortPhoneInfo();
+				break;
+			case "7":
 				System.out.println("프로그램을 종료합니다. ");
-				return;
+				return;// 프로그램 종료하는법.
 			default:
 				break;
 
