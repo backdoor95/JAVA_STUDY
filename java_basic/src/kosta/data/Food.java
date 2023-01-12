@@ -8,6 +8,7 @@ public class Food {
 		super();
 		this.foodName = foodName;
 		this.price = price;
+		//System.out.println("생성자의 주소 = "+this);
 	}
 	public String getFoodName() {
 		return foodName;

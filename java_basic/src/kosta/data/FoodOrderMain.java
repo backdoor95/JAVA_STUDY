@@ -12,7 +12,7 @@ public class FoodOrderMain {
 		LinkedList<Order> q = new LinkedList<Order>();
 		System.out.println("식당 주문관리 프로그램 시작");
 		int totalAmount = 0;
-
+		//System.out.println("main의 객체 주소 = "+food[0]);
 		while (true) {
 			System.out.println("1.주문요청, 2.주문처리, 3.매출액 총액, 4.종료");
 			String menu = sc.nextLine();

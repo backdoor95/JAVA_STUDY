@@ -16,6 +16,9 @@ public class FileWriterExam {
 		// 변경된 파일을 확인 하려면 File -> refresh
 		// 나는 먼저 파일을 만들고 코딩을 하였음
 		FileWriter writer = null;
+		
+		
+		// === 선생님 코드======
 		Scanner sc = new Scanner(System.in);
 		String str;
 

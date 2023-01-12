@@ -1,5 +1,9 @@
 package kosta.Phone;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -67,7 +71,7 @@ public class Manager {
 	public void searchPhoneInfo() {
 		System.out.println("검색할 이름을 입력해 주세요");
 		String name = DataInput.sc.nextLine();
-		int idx = -1;
+		//int idx = -1;
 
 		for (int i = 0; i < peopleList.size(); i++) {
 //			if (people[i].getName().equals(name)) {
@@ -77,20 +81,20 @@ public class Manager {
 //			}
 			if (peopleList.get(i).getName().equals(name)) {
 				peopleList.get(i).show();
-				idx = i;
-				break;
+				return;
+				
 			}
 
 		}
-		if (idx == -1)
-			System.out.println("전화번호가 존재하지 않습니다.");
+		
+		System.out.println("전화번호가 존재하지 않습니다.");
 
 	}
 
 	public void updatePhoneInfo() {
 		System.out.println("검색할 이름을 입력해 주세요");
 		String name = DataInput.sc.nextLine();
-		int idx = -1;
+//		int idx = -1;
 		for (int i = 0; i < peopleList.size(); i++) {
 //			if (people[i].getName().equals(name)) {
 //				System.out.println("새로운 전화번호를 입력해주세요");
@@ -106,12 +110,11 @@ public class Manager {
 				String phoneNo = DataInput.sc.nextLine();
 				peopleList.get(i).setPhoneNo(phoneNo);
 				System.out.println("전화번호가 수정되었습니다.");
-				idx = i;
-				break;
+				return;
 			}
 		}
-		if (idx == -1)
-			System.out.println("전화번호가 존재하지 않습니다.");
+		
+		System.out.println("전화번호가 존재하지 않습니다.");
 
 	}
 
@@ -119,22 +122,21 @@ public class Manager {
 		System.out.println("삭제할 이름을 입력해 주세요");
 		String name = DataInput.sc.nextLine();
 		int idx = -1;
+		System.out.println("1");
 		for (int i = 0; i < peopleList.size(); i++) {
 //			if (people[i].getName().equals(name)) {
 //				idx = i;
 //				break;
 //			}
-			if (peopleList.get(i).getName().equals(name)) {
-				if (idx == -1) {
-					System.out.println("제거할 전화번호가 존재하지 않습니다.");
-				} else {
-					peopleList.remove(idx);
-					System.out.println("제거 완료하였습니다.");
-				}
-				break;
+
+			if(peopleList.get(i).getName().equals(name)) {
+				peopleList.remove(i);
+				System.out.println("제거 완료하였습니다.");
+				return;
 			}
 		}
-
+		
+		System.out.println("제거할 전화번호가 존재하지 않습니다.");
 //		if (idx == -1) {
 //			System.out.println("전화번호가 존재하지 않습니다");
 //		} else {
@@ -190,6 +192,50 @@ public class Manager {
 
 		}
 
+	}
+	
+	public void savePhoneInfo() {
+		System.out.println("정보를 저장합니다. 저장중....");
+		ObjectOutputStream oos = null;
+		try {
+			oos = new ObjectOutputStream(new FileOutputStream("PhoneInfo.txt"));
+//			for(int i=0;i<peopleList.size();i++) {
+//				oos.writeObject(peopleList[i]);
+//			}
+			oos.writeObject(peopleList);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				oos.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		
+		System.out.println("저장완료");
+	}
+	
+	public void recallPhoneInfo() {
+		System.out.println("파일을 불러오는 중 ...");
+		ObjectInputStream ois = null;
+		
+		try {
+			ois = new ObjectInputStream(new FileInputStream("PhoneInfo.txt"));
+			peopleList = (List<PhoneInfo>)ois.readObject();
+		} catch (Exception e) {
+			e.printStackTrace();
+			
+		}finally {
+			try {
+				ois.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		System.out.println("파일 불러오기 완료");
+		
 	}
 
 }

@@ -14,7 +14,7 @@ public class PhoneMain {
 		int count = 0;
 
 		while (true) {
-			System.out.println("메뉴를 입력해주세요 : 1.정보입력 , 2.출력, 3.검색, 4.수정, 5.삭제, 6.정렬, 7.종료");
+			System.out.println("메뉴를 입력해주세요 : 1.정보입력 , 2.출력, 3.검색, 4.수정, 5.삭제, 6.정렬, 7.저장, 8.불러오기, 9.종료");
 			menu = DataInput.sc.nextLine();/// 내가 틀린 부분!!!!!!!!!!!!!!!!!!!!!!!!!! 이렇게 쓰면됨.
 			switch (menu) {
 			case "1":
@@ -42,8 +42,14 @@ public class PhoneMain {
 				Mg.sortPhoneInfo();
 				break;
 			case "7":
+				Mg.savePhoneInfo();
+				break;
+			case "8":
+				Mg.recallPhoneInfo();
+				break;
+			case "9":
 				System.out.println("프로그램을 종료합니다. ");
-				return;// 프로그램 종료하는법.
+				return;// 프로그램 종료하는법.  그냥 return; 을 해서 프로그램을 종료시킬수 있다.
 			default:
 				break;
 
