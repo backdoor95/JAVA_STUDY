@@ -1,5 +1,8 @@
 package kosta.Phone;
 
+import java.io.File;
+import java.util.GregorianCalendar;
+
 import kosta.Phone.DataInput;
 
 public class PhoneMain {
@@ -12,6 +15,21 @@ public class PhoneMain {
 		// Scanner sc = new Scanner(System.in);
 		String menu; // 1. 정보입력 , 2. 출력
 		int count = 0;
+
+		File file = new File(".");
+		File arr[] = file.listFiles();
+		for (int i = 0; i < arr.length; i++) {
+			String name = arr[i].getName();
+			if(arr[i].isFile()) {
+				System.out.printf("%-25s %7d", name, arr[i].length());
+			}else {
+				System.out.printf("%-25s    <DIR> ", name);// '-'가 오른쪽 빈자리 공백으로 채우라는 명령어
+			}
+			long time = arr[i].lastModified();
+			GregorianCalendar calendar = new GregorianCalendar();
+			calendar.setTimeInMillis(time);
+			System.out.printf("%1$tF %1$tT %n", calendar);
+		}
 
 		while (true) {
 			System.out.println("메뉴를 입력해주세요 : 1.정보입력 , 2.출력, 3.검색, 4.수정, 5.삭제, 6.정렬, 7.저장, 8.불러오기, 9.종료");
@@ -49,7 +67,7 @@ public class PhoneMain {
 				break;
 			case "9":
 				System.out.println("프로그램을 종료합니다. ");
-				return;// 프로그램 종료하는법.  그냥 return; 을 해서 프로그램을 종료시킬수 있다.
+				return;// 프로그램 종료하는법. 그냥 return; 을 해서 프로그램을 종료시킬수 있다.
 			default:
 				break;
 
