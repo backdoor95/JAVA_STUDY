@@ -24,7 +24,7 @@ public class FileWriterExam {
 
 		System.out.print("입력> ");
 		String str2 = "";
-		String poem = "";
+		String poem = "";// 저장용
 		while (!(str2 = sc.nextLine()).equals("q")) {
 			System.out.print("입력> ");
 			poem += str2;
