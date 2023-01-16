@@ -35,7 +35,7 @@ public class io_SerialExam {
 	public void read() {
 		ObjectInputStream ois = null;
 		try {
-			ois = new ObjectInputStream(new FileInputStream("object.ser"))
+			ois = new ObjectInputStream(new FileInputStream("object.ser"));
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
